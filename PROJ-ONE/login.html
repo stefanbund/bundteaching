@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJ-ONE | Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFF0D4 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9) !important;
+            border: 1px solid rgba(255, 140, 0, 0.1) !important;
+        }
+
+        .login-card h2 {
+            color: #FF8BA00;
+            color: #FF8C00;
+        }
+
+        .login-card p,
+        .login-card a,
+        .login-card .checkbox {
+            color: #666 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card login-card glass-card text-white shadow-lg">
+        <h2 class="fw-bold mb-4">PROJ-ONE</h2>
+        <p class="mb-5 text-white-50">Welcome back! Please login to your account.</p>
+
+        <form>
+            <div class="form-floating mb-3 text-dark">
+                <input type="email" class="form-control rounded-pill px-4" id="floatingInput"
+                    placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-4 text-dark">
+                <input type="password" class="form-control rounded-pill px-4" id="floatingPassword"
+                    placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>
+
+            <div class="checkbox mb-3 text-start">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+
+            <button class="w-100 btn btn-lg btn-light rounded-pill fw-bold py-3 text-primary" type="submit">Sign
+                in</button>
+            <p class="mt-4 mb-0 text-white-50">&copy; 2024</p>
+            <a href="index.html" class="text-white-50 small mt-2 d-block text-decoration-none">Back to Home</a>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

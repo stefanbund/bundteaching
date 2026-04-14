@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Receiver</title>
+    <style>
+        img {
+            max-width: 400px;
+            border-radius: 8px;
+        }
+
+        .container {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="output-title">Waiting for title...</h1>
+        <img id="output-image" src="" alt="User provided image">
+        <p id="output-desc">Waiting for description...</p>
+    </div>
+
+    <script>
+        // 1. Grab the query string from the current URL
+        const queryString = window.location.search;
+
+        // 2. Parse it into an object we can work with
+        const urlParams = new URLSearchParams(queryString);
+
+        // 3. Extract the specific values using the 'name' attributes from Page 1
+        const imgVal = urlParams.get('imgUrl');
+        const titleVal = urlParams.get('title');
+        const descVal = urlParams.get('desc');
+
+        // 4. Update the DOM elements
+        if (imgVal) document.getElementById('output-image').src = imgVal;
+        if (titleVal) document.getElementById('output-title').textContent = titleVal;
+        if (descVal) document.getElementById('output-desc').textContent = descVal;
+    </script>
+</body>
+
+</html>

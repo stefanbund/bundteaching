@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example 2: Applying Styles</title>
+</head>
+<body>
+  <div id="product1">Product 1</div>
+  <div id="product2">Product 2</div>
+  <div id="product3">Product 3</div>
+
+  <script>
+    const products = [
+      { id: "product1", price: 20, isDiscounted: true },
+      { id: "product2", price: 50, isDiscounted: false },
+      { id: "product3", price: 30, isDiscounted: true },
+    ];
+
+    products.map((product) => {
+      const element = document.getElementById(product.id);
+      if (element) {
+        if (product.isDiscounted) {
+          element.style.color = "red";
+          element.style.fontWeight = "bold";
+        } else {
+          element.style.color = "blue";
+        }
+      }
+    });
+  </script>
+</body>
+</html>

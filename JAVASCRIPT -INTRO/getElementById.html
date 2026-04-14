@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById Example</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to my page!</h1>
+
+        <p id="paragraph1">This is the first paragraph.  It's just some example text.</p>
+
+        <h2 id="heading2">A Subheading</h2>
+        <p id="paragraph2">This is another paragraph, a little shorter than the first.</p>
+
+        <ul id="myList">
+            <li id="item1">Item 1</li>
+            <li id="item2">Item 2</li>
+            <li id="item3">Item 3</li>
+        </ul>
+
+        <button onclick="changeText()">Change Text</button>
+        <button onclick="changeStyle()">Change Style</button>
+        <button onclick="addItem()">Add List Item</button>
+        <button onclick="getImage()">Get Image</button>
+
+        <div id="imageContainer"></div>
+
+    </div>
+
+
+    <script>
+        function changeText() {
+            document.getElementById("paragraph1").textContent = "The first paragraph has been changed!";
+            document.getElementById("heading2").innerHTML = "<em>A modified</em> Subheading!"; // Using innerHTML for HTML content
+            document.getElementById("item2").innerText = "Item 2 - Modified"; //Using innerText for text content
+
+        }
+
+        function changeStyle() {
+            let element = document.getElementById("paragraph2");
+            element.style.color = "blue";
+            element.style.fontWeight = "bold";
+            document.getElementById("myList").classList.add("highlight");
+
+        }
+
+        function addItem() {
+          let newItem = document.createElement("li");
+          newItem.textContent = "New Item Added!";
+          document.getElementById("myList").appendChild(newItem);
+        }
+
+        function getImage() {
+            let img = document.createElement('img');
+            img.src = 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png'; // Replace with your image URL
+            img.alt = 'Google Logo';
+            document.getElementById('imageContainer').appendChild(img);
+        }
+
+    </script>
+
+</body>
+</html>

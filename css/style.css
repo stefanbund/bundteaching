@@ -1,0 +1,47 @@
+/* General Layout */
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+/* Style Set 1: Nature */
+.box-nature {
+    background-color: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.box-nature p {
+    color: #1b5e20;
+    font-style: italic;
+}
+
+/* Style Set 2: Modern Dark */
+.box-dark {
+    background-color: #263238;
+    border-left: 10px solid #00bcd4;
+    padding: 15px;
+}
+
+.box-dark p {
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Style Set 3: Playful */
+.box-playful {
+    background-color: #fff9c4;
+    border: 3px dashed #ff9800;
+    padding: 15px;
+}
+
+.box-playful p {
+    color: #e65100;
+    font-family: "Courier New", monospace;
+}

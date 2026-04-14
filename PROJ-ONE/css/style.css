@@ -1,0 +1,97 @@
+:root {
+    --primary-gradient: linear-gradient(135deg, #FFBA00 0%, #FF8C00 100%);
+    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.jumbotron {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 100px 0;
+    margin-bottom: 2rem;
+    border-radius: 0;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-primary {
+    background: var(--primary-gradient);
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+}
+
+.btn-outline-primary {
+    color: #FF8C00;
+    border-color: #FF8C00;
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary-gradient);
+    border-color: transparent;
+    color: white;
+}
+
+.text-primary {
+    color: #FF8C00 !important;
+}
+
+.badge.bg-primary {
+    background: var(--primary-gradient) !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #FF8C00 0%, #FFBA00 100%);
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+}
+
+footer {
+    background: #1a1a1a;
+    color: #ddd;
+    padding: 50px 0;
+}
+
+.feature-card {
+    border: 1px solid rgba(255, 140, 0, 0.2) !important;
+    background: white;
+    box-shadow: -15px 10px 30px rgba(255, 140, 0, 0.1) !important;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    box-shadow: -20px 15px 40px rgba(255, 140, 0, 0.15) !important;
+    transform: translateX(5px);
+}
+
+.feature-card h3 {
+    color: #FF8C00;
+    font-weight: 800;
+}

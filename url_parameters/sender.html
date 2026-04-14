@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Encoder</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Step 1: Encode Data into URL</h2>
+
+    <label>Title:</label><br>
+    <input type="text" id="titleInput" value="My Awesome Image" style="width: 80%;"><br><br>
+
+    <label>Image FQDN (URL):</label><br>
+    <input type="text" id="imgInput" value="https://images.unsplash.com/photo-1518770660439-4636190af475"
+        style="width: 80%;"><br><br>
+
+    <label>Description Text:</label><br>
+    <textarea id="descInput" style="width: 80%;">This is a "high-tech" circuit board!</textarea><br><br>
+
+    <button onclick="sendData()">Generate URL & Go</button>
+
+    <script>
+        function sendData() {
+            const titleValue = document.getElementById('titleInput').value;
+            const imgValue = document.getElementById('imgInput').value;
+            const descValue = document.getElementById('descInput').value;
+
+            // Manual Encoding: This converts special characters into %xx format
+            const encodedTitle = encodeURIComponent(titleValue);
+            const encodedImg = encodeURIComponent(imgValue);
+            const encodedDesc = encodeURIComponent(descValue);
+
+            // Construct the final destination URL
+            // Matches display.html expectations: imgUrl, title, desc
+            const targetURL = `display.html?imgUrl=${encodedImg}&title=${encodedTitle}&desc=${encodedDesc}`;
+
+            console.log("Redirecting to: " + targetURL);
+            window.location.href = targetURL;
+        }
+    </script>
+</body>
+
+</html>

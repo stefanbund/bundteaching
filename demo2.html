@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>My test page</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            padding: 2rem;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image-container img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hover-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .image-container:hover .hover-message {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 4 heading levels: -->
+    <h1>My main title</h1>
+    <h2>My top level heading</h2>
+    <h3>My subheading</h3>
+    <h4>My sub-subheading</h4>
+    <p>check out my initial image:</p>
+
+    <div class="image-container">
+        <p>I'm creating a link to <a href="http://example.com/page?key1=value1&key2=value2">
+                linking with url parameters...</a>
+        </p>
+        <p>I'm creating a link to <a href="https://www.mozilla.org/en-US/">
+                <img src="stolen.jpg" alt="an image of google picasa brand" /> </a>
+        </p>
+        <!-- example.com/page?key1=value1&key2=value2-->
+
+
+        <div class="hover-message">
+            IMAGE BY STEFAN BUND, THANK YOU! 🕵️♂️
+        </div>
+    </div>
+</body>
+
+</html>

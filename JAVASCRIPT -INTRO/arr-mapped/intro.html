@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example 1: Text Update</title>
+</head>
+<body>
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+
+  <script>
+    const itemIds = ["item1", "item2", "item3"]; //names of the divs i wish to ammend / change
+    const newText = ["First item", "Second item", "Third item"]; //data i wish to paint the page with
+
+    itemIds.map((id, index) => {
+      console.log(id, index)
+      const element = document.getElementById(id);
+      if (element) {
+        console.log(index)
+        element.textContent = newText[index];
+      }
+    });
+  </script>
+</body>
+</html>

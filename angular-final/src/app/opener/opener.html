@@ -1,0 +1,20 @@
+<div class="user-card">
+    <h2>User Profile</h2>
+    <img [src]="profileImage" alt="Profile Image loads here">
+
+    <p><strong>Name: </strong><strong>{{ username }}</strong></p>
+    <p><strong>Role: </strong><strong>{{ role }}</strong></p>
+    <p><strong>Status: </strong><strong>{{ isLoggedIn ? 'Logged In' : 'Logged Out' }}</strong></p>
+
+    <hr>
+    @if(isLoggedIn){
+    <p class="status-online">User is currently online</p>
+    <button (click)="toggleLogin()">Log Out</button>
+    } @else {
+    <p class="status-offline">User is currently offline</p>
+    <button (click)="toggleLogin()">Log In</button>
+    }
+    <hr>
+    <a routerLink="/home" class="back-link">Back to Dashboard</a> |
+    <a routerLink="/profile" class="back-link">View Profile</a>
+</div>
